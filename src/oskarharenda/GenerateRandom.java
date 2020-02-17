@@ -22,6 +22,9 @@ public class GenerateRandom {
         Map<Integer,Integer> randomNumbers = new HashMap<>();
         Random r = new Random(interval);
         int[] counter = new int [interval];
+        for(int i=0; i<counter.length; i++){
+            counter[i]=1;
+        }
         for(int i=0; i<amount; i++){
             int rand=r.nextInt(interval);
             randomNumbers.put(rand,counter[rand]++);
